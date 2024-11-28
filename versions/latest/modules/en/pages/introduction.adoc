@@ -1,6 +1,8 @@
-= Introduction 123
+= Introduction
 
 // Add logo image
+
+123
 
 {product-name}, also known as RKE Government, is Rancher's next-generation Kubernetes distribution.
 
