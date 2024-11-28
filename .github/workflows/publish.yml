@@ -41,6 +41,6 @@ jobs:
         rm -rf *
         mv ../site-temp/* .
         git add .
-        git commit -m "Deploy ${GITHUB_REF} to gh-pages branch"
-        git push origin deploy-${GITHUB_REF}
-        gh pr create --base gh-pages --head deploy-${GITHUB_REF} --title "Deploy ${GITHUB_REF} to gh-pages branch" --body "Deploy ${GITHUB_REF} to gh-pages branch"
+        git commit -m "Deploy ${GITHUB_SHA} to gh-pages branch"
+        git push origin deploy-${GITHUB_SHA}
+        gh pr create --base gh-pages --head deploy-${GITHUB_SHA} --title "Deploy ${GITHUB_REF} to gh-pages branch" --body "Deploy ${GITHUB_REF} to gh-pages branch"
