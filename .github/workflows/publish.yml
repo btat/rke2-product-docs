@@ -5,6 +5,7 @@ on:
   pull_request:
   workflow_dispatch:
 concurrency:
+  group: deploy-gh-pages
   cancel-in-progress: false
 permissions:
   contents: write
