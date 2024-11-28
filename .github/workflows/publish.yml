@@ -8,9 +8,7 @@ concurrency:
   group: deploy-gh-pages
   cancel-in-progress: false
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+  contents: read
   pull-requests: write
 jobs:
   build:
@@ -43,4 +41,4 @@ jobs:
         git add .
         git commit -m "Deploy ${GITHUB_SHA} to gh-pages branch"
         git push origin deploy-${GITHUB_SHA}
-        gh pr create --base gh-pages --head deploy-${GITHUB_SHA} --title "Deploy ${GITHUB_REF} to gh-pages branch" --body "Deploy ${GITHUB_REF} to gh-pages branch"
+        gh pr create --base gh-pages --head deploy-${GITHUB_SHA} --title "Deploy ${GITHUB_SHA} to gh-pages branch" --body "Deploy ${GITHUB_SHA} to gh-pages branch"
