@@ -7,8 +7,8 @@
 It is a fully https://landscape.cncf.io/?group=projects-and-products&view-mode=card&item=platform--certified-kubernetes-distribution--rke-government#app-definition-and-development--application-definition-image-build[conformant Kubernetes distribution] that focuses on security and compliance within the U.S. Federal Government sector.
 
 To meet these goals, {product-name} does the following:
-
-* Provides xref:security/fake_hardening_guide.adoc[defaults and configuration options] that allow clusters to pass the CIS Kubernetes Benchmark xref:security/cis_self_assessment16.adoc[v1.6] or xref:security/cis_self_assessment123.adoc[v1.23] with minimal operator intervention
+fixed
+* Provides xref:security/hardening_guide.adoc[defaults and configuration options] that allow clusters to pass the CIS Kubernetes Benchmark xref:security/cis_self_assessment16.adoc[v1.6] or xref:security/cis_self_assessment123.adoc[v1.23] with minimal operator intervention
 * Enables xref:security/fips_support.adoc[FIPS 140-2 compliance]
 * Regularly scans components for CVEs using https://github.com/aquasecurity/trivy[trivy] in our build pipeline
 
