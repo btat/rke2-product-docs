@@ -1,4 +1,6 @@
 = Helm Integration
+:revdate: 2025-07-10
+:page-revdate: {revdate}
 
 Helm is the package management tool of choice for Kubernetes. Helm charts provide templating syntax for Kubernetes YAML manifest documents. With Helm we can create configurable deployments instead of just using static files. For more information about creating your own catalog of deployments, check out the docs at https://helm.sh/docs/intro/quickstart/.
 
@@ -19,7 +21,7 @@ Ensure that all files within the manifests directory (or within any subdirectori
 
 An example of an error that would be reported if the file name contains underscores:
 
-[,bash]
+[,sh]
 ----
 `Failed to process config: failed to process /var/lib/rancher/rke2/server/manifests/example_manifest.yaml:
    Addon.k3s.cattle.io "example_manifest" is invalid: metadata.name: Invalid value: "example_manifest":

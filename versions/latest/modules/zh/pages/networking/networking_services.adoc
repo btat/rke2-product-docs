@@ -1,4 +1,6 @@
 = Networking Services
+:revdate: 2025-07-09
+:page-revdate: {revdate}
 
 This page explains how CoreDNS and the Nginx-Ingress controller work within RKE2.
 
@@ -82,5 +84,10 @@ To disable the NGINX ingress controller, start each server with the `disable: rk
 == Service Load Balancer
 
 Kubernetes Services can be of type LoadBalancer but it requires an external load balancer controller to implement things correctly and for example,provide the external-ip. RKE2 can optionally deploy a load balancer controller known as https://github.com/k3s-io/klipper-lb[ServiceLB] that uses available host ports. For more information, please read the following https://docs.k3s.io/networking/networking-services#service-load-balancer[link].
+
+[TIP]
+====
+When looking at the K3s documentation, use the label `svccontroller.rke2.cattle.io` instead of `svccontroller.k3s.cattle.io` where applicable.
+====
 
 To enable serviceLB, use the flag `--serviceLB` when deploying RKE2
