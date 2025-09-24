@@ -43,27 +43,15 @@ jobs:
             exit 1
           fi
       - name: Check if revdate is missing
-        continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          echo "------"
-          echo $(bin/revdate ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
-          echo "------"
           result=$(bin/revdate ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
-          echo "result:\n\n$result"
-          echo "------"
-          exit_code=$?
-          echo "exit_code: $exit_code"
-          echo "------"
           if [[ -n "$result" ]]; then
-            echo "hello foo"
             body="As of ${{ github.event.pull_request.head.sha }}, the following files have been modified without a corresponding update to the revdate attribute. If this is intentional, please ignore this message. For guidance on when the revdate needs to be updated, please refer to the [SUSE Style Guide](https://documentation.suse.com/style/current/single-html/style-guide-adoc/index.html#sec-revinfo).
             
-            > $result
+            $result
             "
             gh pr comment ${{ github.event.pull_request.number }} --body $body
-          else
-            echo "hello bar"
           fi
 
