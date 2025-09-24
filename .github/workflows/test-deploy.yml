@@ -58,11 +58,9 @@ jobs:
           echo "------"
           if [[ -n "$result" ]]; then
             echo "hello foo"
-            body="The following files have been modified, but the revdate was not updated. If this is intended, please ignore this message. Refer to the [SUSE Styleguide](https://documentation.suse.com/style/current/single-html/style-guide-adoc/index.html#sec-revinfo) for guidance on when revdate needs to be updated
+            body="As of ${{ github.event.pull_request.head.sha }}, the following files have been modified without a corresponding update to the revdate attribute. If this is intentional, please ignore this message. For guidance on when the revdate needs to be updated, please refer to the [SUSE Style Guide](https://documentation.suse.com/style/current/single-html/style-guide-adoc/index.html#sec-revinfo).
             
-            \`\`\`
-            $result
-            \`\`\`
+            > $result
             "
             gh pr comment ${{ github.event.pull_request.number }} --body $body
           else
