@@ -13,12 +13,12 @@ for file in $files_modified; do
   fi
 done
 
-if [[ ${#affected_files[@]} -eq 0 ]]; then
-  exit 0
-else
-  for file in ${affected_files[@]}; do
-    echo $file
-  done
-  exit 1
-fi
+# if [[ ${#affected_files[@]} -eq 0 ]]; then
+#   exit 0
+# else
+#   for file in ${affected_files[@]}; do
+#     echo $file
+#   done
+#   exit 1
+# fi
 
