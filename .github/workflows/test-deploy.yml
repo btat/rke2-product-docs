@@ -52,8 +52,8 @@ jobs:
           if [ exit_code -ne "0" ]; the
             body="The following files have been modified, but the revdate was not updated. If this is intended, please ignore this message. Refer to the [SUSE Styleguide](link) for guidance on when revdate needs to be updated"
             gh pr comment ${{ github.event.pull_request.number }} \
-              --body "$body
-              
-              $result"
+              --body "Files: $result"
+          else
+            echo "test"
           fi
 
