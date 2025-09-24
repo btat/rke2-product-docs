@@ -1,11 +1,11 @@
 = v1.25.X
-:revdate: 2025-05-06
+:revdate: 2025-12-06
 :page-revdate: {revdate}
 
 [CAUTION]
 .Upgrade Notice
 ====
-Before upgrading from earlier releases, be sure to read the Kubernetes https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#urgent-upgrade-notes[Urgent Upgrade Notes].
+Before upgrading from earlier releases, be sure to read the Kubernetes https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#urgent-upgrade-notes[Urgent Upgrade Notes].a
 ====
 
 [%autowidth]

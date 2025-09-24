@@ -5,7 +5,7 @@
 [CAUTION]
 .Upgrade Notice
 ====
-Before upgrading from earlier releases, be sure to read the Kubernetes https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#urgent-upgrade-notes[Urgent Upgrade Notes].
+Before upgrading from earlier releases, be sure to read the Kubernetes https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#urgent-upgrade-notes[Urgent Upgrade Notes].a
 ====
 
 [%autowidth]
