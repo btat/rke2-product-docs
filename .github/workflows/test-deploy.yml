@@ -50,7 +50,7 @@ jobs:
           if [[ -n "$result" ]]; then
             body="The following files have been modified without a corresponding update to the revdate attribute. If this is intentional, please ignore this message. For guidance on when the revdate needs to be updated, please refer to the [SUSE Style Guide](link).
             
-            > $result
+            $result
             "
             gh pr comment ${{ github.event.pull_request.number }} --body $body
           fi
