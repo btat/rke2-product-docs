@@ -51,7 +51,9 @@ jobs:
           if [[ -n "$result" ]]; then
             echo "The following files have been modified without a corresponding update to the revdate attribute. If this is intentional, please ignore this message. For guidance on when the revdate needs to be updated, please refer to the [SUSE Style Guide](https://documentation.suse.com/style/current/single-html/style-guide-adoc/index.html#sec-revinfo).
             
+            \`\`\`
             $result
+            \`\`\`
             " >> body.txt
             gh pr comment ${{ github.event.pull_request.number }} --body-file body.txt
           fi
