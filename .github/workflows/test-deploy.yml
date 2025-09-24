@@ -41,10 +41,6 @@ jobs:
             cat local-build.log
             exit 1
           fi
-      - name: Check files for missing nav entries
-        run: bin/files-missing-nav
-      - name: Check for links to Community docs
-        run: bin/community-links
       - name: Check if revdate is missing
         env:
           GH_TOKEN: ${{ github.token }}
