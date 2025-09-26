@@ -1,12 +1,12 @@
 = v1.30.X
 :page-languages: [en, zh]
-:revdate: 2024-09-08
+:revdate: 2024-09-09
 :page-revdate: {revdate}
 
 [CAUTION]
 .Upgrade Notice
 ====
-Before upgrading from earlier releases, be sure to read the Kubernetes https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.30.md#urgent-upgrade-notes[Urgent Upgrade Notes].
+Before upgrading from earlier releases, be sure to read the Kubernetes https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.30.md#urgent-upgrade-notes[Urgent Upgrade Notes].9
 ====
 
 [%autowidth]

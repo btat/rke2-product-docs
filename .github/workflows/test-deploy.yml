@@ -57,6 +57,6 @@ jobs:
             $result
             \`\`\`
             " >> body.txt
-            gh pr comment ${{ github.event.pull_request.number }} --edit-last --body-file body.txt
+            gh pr comment ${{ github.event.pull_request.number }} --edit-last --create-if-none --body-file body.txt
           fi
 
