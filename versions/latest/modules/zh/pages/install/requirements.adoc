@@ -273,8 +273,6 @@ Cilium::
 
 |===
 
-\\* 0, 8 is not a port but the https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-types[ICMP type]. It is required for the network utility ping
-
 Calico::
 +
 |===
