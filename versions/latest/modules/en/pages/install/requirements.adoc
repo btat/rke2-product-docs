@@ -225,9 +225,9 @@ The VXLAN port on nodes should not be exposed to the world as it opens up your c
 
 [tabs]
 ======
-
 Canal::
 +
+--
 |===
 | Port | Protocol | Source | Destination | Description
 
@@ -255,9 +255,11 @@ Canal::
 | All RKE2 nodes
 | Canal CNI with WireGuard IPv6/dual-stack
 |===
+--
 
 Cilium::
 +
+--
 |===
 | Port | Protocol | Source | Destination | Description
 
@@ -286,10 +288,15 @@ Cilium::
 | Cilium CNI with WireGaurd
 |===
 
-\\* 0, 8 is not a port but the https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-types[ICMP type]. It is required for the network utility ping
+[NOTE]
+====
+`0, 8*` is not a port but the https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-types[ICMP type]. It is required for the network utility ping.
+====
+--
 
 Calico::
 +
+--
 |===
 | Port | Protocol | Source | Destination | Description
 
@@ -323,9 +330,11 @@ Calico::
 | All RKE2 nodes
 | Calico health checks
 |===
+--
 
 Flannel::
 +
+--
 |===
 | Port | Protocol | Source | Destination | Description
 
@@ -335,6 +344,7 @@ Flannel::
 | All RKE2 nodes
 | Flannel CNI with VXLAN
 |===
+--
 ======
 
 [#_windows_specific_inbound_network_rules]

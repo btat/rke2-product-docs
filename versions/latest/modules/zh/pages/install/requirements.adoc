@@ -214,6 +214,7 @@ RKE2 服务器需要端口 6443 和 9345 可被集群中的其他节点访问。
 
 Canal::
 +
+--
 |===
 | 端口 | 协议 | 源 | 目标 | 说明
 
@@ -241,9 +242,11 @@ Canal::
 | 所有 RKE2 节点
 | 使用 WireGuard IPv6/双栈的 Canal CNI
 |===
+--
 
 Cilium::
 +
+--
 |===
 | 端口 | 协议 | 源 | 目标 | 说明
 
@@ -273,10 +276,15 @@ Cilium::
 
 |===
 
-\\* 0, 8 is not a port but the https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-types[ICMP type]. It is required for the network utility ping
+[NOTE]
+====
+`0, 8*` is not a port but the https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml#icmp-parameters-types[ICMP type]. It is required for the network utility ping.
+====
+--
 
 Calico::
 +
+--
 |===
 | 端口 | 协议 | 源 | 目标 | 说明
 
@@ -310,9 +318,11 @@ Calico::
 | 所有 RKE2 节点
 | Calico 健康检查
 |===
+--
 
 Flannel::
 +
+--
 |===
 | 端口 | 协议 | 源 | 目标 | 说明
 
@@ -322,6 +332,7 @@ Flannel::
 | 所有 RKE2 节点
 | 使用 VXLAN 的 Flannel CNI
 |===
+--
 ======
 
 === Windows 特定的入站网络规则
